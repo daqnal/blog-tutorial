@@ -1,0 +1,12 @@
+baseURL = 'https://example.org/' # <- change this to the root of your website
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+enableRobotsTXT = true
+enableEmoji = true
+summaryLength = 20
+
+
+[markup]
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            hardWraps = true

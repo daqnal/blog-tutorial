@@ -1,0 +1,5 @@
+static/.sass-cache
+.sass-cache
+public/
+static/pagefind
+.hugo_build.lock

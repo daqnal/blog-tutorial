@@ -1,0 +1,12 @@
+{{ define "main" }}
+  <main class="container">
+    <header>
+      <h1>{{ .Title }}</h1>
+    </header>
+    <div>
+      {{ range first 3 .Site.RegularPages }}
+          {{ .Render "summary" }}
+      {{ end }}
+    </div>
+  </main>
+{{ end }}
