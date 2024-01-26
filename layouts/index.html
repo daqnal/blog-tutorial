@@ -1,9 +1,9 @@
 {{ define "main" }}
   <main class="container">
     <header>
-      <h1>{{ .Title }}</h1>
+      <h1 id="site-title">{{ .Title }}</h1>
     </header>
-    <div>
+    <div id="summary-container">
       {{ range first 3 .Site.RegularPages }}
           {{ .Render "summary" }}
       {{ end }}

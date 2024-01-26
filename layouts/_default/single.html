@@ -1,26 +1,26 @@
 {{ define "main" }}
-<section class="container">
-  <h1>{{ .Title }}</h1>
-  <div>
+<section>
+  <main class="container">
+    <h1 id="article-title">{{ .Title }}</h1>
+    <h4 id="article-info">
+      <!-- <span class="tag is-link">{{ .ReadingTime }} Minutes</span> -->
+      <span>{{ .Date.Format "Jan 2, 2006" }}</span>
+      <span>\\</span>
+      <span>{{ .WordCount }} Words</span>
+    </h4>
+
     <article>
       {{ .Content }}
     </article>
-  </div>
-</section>
-<aside>
-  <div>
-    <section>
-      <h4>{{ .Date.Format "Mon Jan 2, 2006" }}</h4>
-      <h5>{{ .WordCount }} Words</h5>
-    </section>
-  </div>
-  <div>
+  </main>
+
+  <div class="container" id="pagination-container">
     {{ with .PrevInSection }}
-    <a class="previous" href="{{ .Permalink }}"> {{.Title}}</a>
+    <span>Previous Post: <a class="previous" href="{{ .Permalink }}">{{.Title}}</a></span>
     {{ end }}
     {{ with .NextInSection }}
-    <a class="next" href="{{ .Permalink }}"> {{.Title}}</a>
+    <span>Next Post: <a class="next" href="{{ .Permalink }}">{{.Title}}</a></span>
     {{ end }}
   </div>
-</aside>
+</section>
 {{ end }}

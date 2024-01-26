@@ -49,9 +49,51 @@
   --switch-checked-background-color: var(--primary);
 }
 
-/* Other customizations go below */
+
+
+/* Minimal default customizations to look ok */
 footer {
     margin-top: auto;
     opacity: 50%;
     text-align: center;
+}
+
+nav {
+  padding: 0 20px;
+  background-color: var(--card-border-color);
+}
+
+#summary-container {
+  border-color: var(--card-border-color);
+  border-width: 5px;
+  border-style: solid;
+  border-radius: 20px;
+  padding: 0 calc(var(--block-spacing-vertical) / 4);
+}
+
+#summary {
+  padding: calc(var(--block-spacing-vertical) / 4) var(--block-spacing-horizontal);
+  margin: calc(var(--block-spacing-vertical) / 4) 0;
+}
+
+.summary-info {
+  margin: 0 0;
+}
+
+#pagination-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#article-info {
+  margin: 0 0;
+}
+
+#article-title {
+  margin-top: var(--typography-spacing-vertical);
+  margin-bottom: 0;
+}
+
+#site-title {
+  font-size: calc(var(--font-size) * 1.5);
 }
