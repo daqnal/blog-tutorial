@@ -3,8 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 /* Customize Pico's styles by overriding CSS variables */
+/* Find the full list here: */
+/* https://github.com/picocss/pico/blob/master/css/themes/default.css */
+
 :root {
-    --font-family: "Kanit"
+  /* Set the Google Font (Kanit in the example) as the primary font by default with backups */
+  --font-family: "Kanit", system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu",
+  "Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 
@@ -51,7 +57,7 @@
 
 
 
-/* Minimal default customizations to look ok */
+/* Minimal customizations to look ok */
 footer {
     margin-top: auto;
     opacity: 50%;
