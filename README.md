@@ -7,5 +7,5 @@
 - [ ] development server script for Windows (Linux/Mac done)
 - [x] .gitignore (make sure all extra pagefind files are clean out)
 - [x] pico.min.css
-- [ ] pagefind necessary files
+- [x] pagefind necessary files
 - [x] fonts
