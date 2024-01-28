@@ -11,6 +11,7 @@
   --font-family: "Kanit", system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu",
   "Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
   "Segoe UI Symbol", "Noto Color Emoji";
+  --border-radius: 0.75rem;
 }
 
 
@@ -59,9 +60,16 @@
 
 /* Minimal customizations to look ok */
 footer {
-    margin-top: auto;
-    opacity: 50%;
-    text-align: center;
+  margin-top: auto;
+  opacity: 50%;
+  text-align: center;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 nav {
@@ -69,11 +77,11 @@ nav {
   background-color: var(--card-border-color);
 }
 
-#summary-container {
+.homepage-content-container {
   border-color: var(--card-border-color);
   border-width: 5px;
   border-style: solid;
-  border-radius: 20px;
+  border-radius: var(--border-radius);
   padding: 0 calc(var(--block-spacing-vertical) / 4);
 }
 
@@ -102,4 +110,27 @@ nav {
 
 #site-title {
   font-size: calc(var(--font-size) * 1.5);
+  margin-bottom: calc(var(--typography-spacing-vertical) / 3);
 }
+
+/* Search page styles */
+#search {
+  padding-top: 3rem;
+}
+
+.pagefind-ui__search-clear {
+  display: none;
+}
+
+.pagefind-ui__search-input {
+  padding-inline-start: 2.75rem;
+  border-radius: 5rem;
+}
+
+ /* Homepage link styles */
+ .homepage-link {
+  margin: calc(var(--block-spacing-vertical) / 4) 0;
+  text-align: center;
+  background-color: var(--card-border-color);
+  border-radius: var(--border-radius);
+ }

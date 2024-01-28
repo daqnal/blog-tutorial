@@ -1,0 +1,26 @@
+{{ define "main" }}
+<script src="/pagefind/pagefind-ui.js"></script>
+
+<div class="container">
+    <div class="special-page-container">
+        <div id="search" type="search" name="search" placeholder="Search"></div>
+    </div>
+</div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({ 
+            element: "#search", 
+            pageSize: 5,
+            resetStyles: false,
+            autofocus: true
+        });
+    });
+    window.addEventListener('keydown', (event) => {
+        if (event.key === '/' || event.key === '.') {
+            event.preventDefault();
+            document.querySelector('div#search input').focus();
+        }
+    });
+    document.getElementById("search").placeholder = "hi";
+</script>
+{{ end }}

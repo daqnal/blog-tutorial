@@ -3,7 +3,15 @@
     <header>
       <h1 id="site-title">{{ .Title }}</h1>
     </header>
-    <div id="summary-container">
+    <div class="homepage-content-container">
+      <div class="grid">
+        <a class="homepage-link" href="/">Link 1</a>
+        <a class="homepage-link" href="/">Link 2</a>
+        <a class="homepage-link" href="/">Link 3</a>
+      </div>
+    </div>
+    <br>
+    <div class="homepage-content-container">
       {{ range first 3 .Site.RegularPages }}
           {{ .Render "summary" }}
       {{ end }}
