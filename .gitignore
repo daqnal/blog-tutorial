@@ -3,3 +3,6 @@ static/.sass-cache
 public/
 static/pagefind
 .hugo_build.lock
+static/pagefind
+!static/pagefind/pagefind.js
+!static/pagefind/pagefind-ui.js

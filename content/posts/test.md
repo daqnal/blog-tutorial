@@ -5,3 +5,13 @@ draft = false
 +++
 
 # test article numero uno
+
+- unordered list
+    - list item
+    - list item
+
+1. ordered list
+    - unordered list within an ordered list
+2. numero dos
+
+emojis do be workin too :sunglasses: :punch: :tada:

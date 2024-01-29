@@ -77,11 +77,15 @@ nav {
   background-color: var(--card-border-color);
 }
 
+#nav-title {
+  font-size: calc(var(--font-size) + 0.5em);
+}
+
 .homepage-content-container {
   border-color: var(--card-border-color);
   border-width: 5px;
   border-style: solid;
-  border-radius: var(--border-radius);
+  border-radius: calc(var(--border-radius) + 0.25rem);
   padding: 0 calc(var(--block-spacing-vertical) / 4);
 }
 
@@ -133,4 +137,5 @@ nav {
   text-align: center;
   background-color: var(--card-border-color);
   border-radius: var(--border-radius);
- }
+  font-size: calc(var(--font-size) * 1.5);
+}

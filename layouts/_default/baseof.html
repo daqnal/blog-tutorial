@@ -3,6 +3,28 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Change the keywords below -->
+    <meta name="keywords" content="blog,hugo,picocss,pagefind">
+    <meta property="og:site_name" content="{{ $.Site.Title }}">
+    <meta property="og:title" content="{{ $.Site.Title }}">
+
+    {{ if .IsPage }}
+		    <title>{{ .Title }} | {{ $.Site.Title }}</title>
+		    <meta property="og:type" content="article">
+		    <meta property="og:title" content="{{ .Title }}">
+		    <meta property="og:description" content="{{ .Summary }}">
+		    <meta name="description" content="{{ .Summary }}">
+		    <meta property="twitter:title" content="{{ .Title }}">
+		    <meta property="twitter:description" content="{{ .Summary }}">
+		    <meta property="article:author" content="your-name">
+		    <meta property="article:published_time" content="{{ .Date }}">
+		{{ else }}
+		    <title>{{ $.Site.Title }}</title>
+		    <meta name="twitter:card" content="summary">
+		    <meta property="og:title" content="{{ $.Site.Title }}">
+		    <meta property="og:description" content="blog about dancing">
+		    <meta name="description" content="blog about dancing">
+		{{ end }}
     
     <link rel="stylesheet" href="/css/pico.min.css">
     <link rel="stylesheet" href="/css/styles.css">

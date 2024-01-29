@@ -1,11 +1,19 @@
-baseURL = 'https://example.org/' # <- change this to the root of your website
+baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 enableRobotsTXT = true
 enableEmoji = true
 summaryLength = 20
 
+[params]
+    description = "check the blog yo"
+    email = "myemail@host.tld"
 
+    # Open graph protocol is metadata that enables a page to become a rich object in a social graph. This format is used for Facebook and some other sites.
+    opengraph = true
+
+
+# Change the markdown renderer to create newlines if you have blank lines in your markdown
 [markup]
     [markup.goldmark]
         [markup.goldmark.renderer]

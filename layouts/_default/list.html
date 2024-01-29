@@ -3,7 +3,7 @@
   <header>
     <h1>{{ .Title }}</h1>
   </header>
-  <div>
+  <div class="homepage-content-container">
     {{ range .Pages }}
       {{ .Render "summary" }}
     {{ end }}
