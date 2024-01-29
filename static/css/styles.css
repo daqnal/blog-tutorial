@@ -1,0 +1,141 @@
+/* Import your favorite fonts here */
+/* https://fonts.google.com/specimen/Kanit */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+/* Customize Pico's styles by overriding CSS variables */
+/* Find the full list here: */
+/* https://github.com/picocss/pico/blob/master/css/themes/default.css */
+
+:root {
+  /* Set the Google Font (Kanit in the example) as the primary font by default with backups */
+  --font-family: "Kanit", system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu",
+  "Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol", "Noto Color Emoji";
+  --border-radius: 0.75rem;
+}
+
+
+/* Blue theme set by Pico */
+/* https://picocss.com/docs/customization.html */
+
+/* Blue Light scheme (Default) */
+/* Can be forced with data-theme="light" */
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+  --primary: #1e88e5;
+  --primary-hover: #1976d2;
+  --primary-focus: rgba(30, 136, 229, 0.125);
+  --primary-inverse: #FFF;
+}
+
+/* Blue Dark scheme (Auto) */
+/* Automatically enabled if user has Dark mode enabled */
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --primary: #1e88e5;
+    --primary-hover: #2196f3;
+    --primary-focus: rgba(30, 136, 229, 0.25);
+    --primary-inverse: #FFF;
+  }
+}
+
+/* Blue Dark scheme (Forced) */
+/* Enabled if forced with data-theme="dark" */
+[data-theme="dark"] {
+  --primary: #1e88e5;
+  --primary-hover: #2196f3;
+  --primary-focus: rgba(30, 136, 229, 0.25);
+  --primary-inverse: #FFF;
+}
+
+/* Blue (Common styles) */
+:root {
+  --form-element-active-border-color: var(--primary);
+  --form-element-focus-color: var(--primary-focus);
+  --switch-color: var(--primary-inverse);
+  --switch-checked-background-color: var(--primary);
+}
+
+
+
+/* Minimal customizations to look ok */
+footer {
+  margin-top: auto;
+  opacity: 50%;
+  text-align: center;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+nav {
+  padding: 0 20px;
+  background-color: var(--card-border-color);
+}
+
+#nav-title {
+  font-size: calc(var(--font-size) + 0.5em);
+}
+
+.homepage-content-container {
+  border-color: var(--card-border-color);
+  border-width: 5px;
+  border-style: solid;
+  border-radius: calc(var(--border-radius) + 0.25rem);
+  padding: 0 calc(var(--block-spacing-vertical) / 4);
+}
+
+#summary {
+  padding: calc(var(--block-spacing-vertical) / 4) var(--block-spacing-horizontal);
+  margin: calc(var(--block-spacing-vertical) / 4) 0;
+}
+
+.summary-info {
+  margin: 0 0;
+}
+
+#pagination-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#article-info {
+  margin: 0 0;
+}
+
+#article-title {
+  margin-top: var(--typography-spacing-vertical);
+  margin-bottom: 0;
+}
+
+#site-title {
+  font-size: calc(var(--font-size) * 1.5);
+  margin-bottom: calc(var(--typography-spacing-vertical) / 3);
+}
+
+/* Search page styles */
+#search {
+  padding-top: 3rem;
+}
+
+.pagefind-ui__search-clear {
+  display: none;
+}
+
+.pagefind-ui__search-input {
+  padding-inline-start: 2.75rem;
+  border-radius: 5rem;
+}
+
+ /* Homepage link styles */
+ .homepage-link {
+  margin: calc(var(--block-spacing-vertical) / 4) 0;
+  text-align: center;
+  background-color: var(--card-border-color);
+  border-radius: var(--border-radius);
+  font-size: calc(var(--font-size) * 1.5);
+}
