@@ -1,4 +1,4 @@
 #!/bin/sh
 hugo
-npx pagefind --site "public" --output-subdir ../static/pagefind
+npx pagefind
 hugo server
