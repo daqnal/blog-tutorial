@@ -2,6 +2,7 @@
 /* https://fonts.google.com/specimen/Kanit */
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
+
 /* Customize Pico's styles by overriding CSS variables */
 /* Find the full list here: */
 /* https://github.com/picocss/pico/blob/master/css/themes/default.css */
@@ -11,6 +12,7 @@
   --font-family: "Kanit", system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu",
   "Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
   "Segoe UI Symbol", "Noto Color Emoji";
+  
   --border-radius: 0.75rem;
 }
 
@@ -59,12 +61,15 @@
 
 
 /* Minimal customizations to look ok */
+
+/* Make the footer stick to the bottom */
 footer {
   margin-top: auto;
   opacity: 50%;
   text-align: center;
 }
 
+/* Arrange the content of every page in a column going down. Some of these styles are essential for the footer to work properly */
 body {
   display: flex;
   min-height: 100vh;
@@ -72,15 +77,33 @@ body {
   justify-content: flex-start;
 }
 
+/* Add some horizontal spacing to the navbar and give it a bg color */
 nav {
   padding: 0 20px;
   background-color: var(--card-border-color);
 }
 
+/* Make the title of the site in the navbar bigger */
 #nav-title {
   font-size: calc(var(--font-size) + 0.5em);
 }
 
+/* Change the size and bottom margin of the title on the homepage */
+#site-title {
+  font-size: calc(var(--font-size) * 1.5);
+  margin-bottom: calc(var(--typography-spacing-vertical) / 3);
+}
+
+/* Add margin, border, background, and rounding to the 3 links on the homepage */
+ .homepage-link {
+  margin: calc(var(--block-spacing-vertical) / 4) 0;
+  text-align: center;
+  background-color: var(--card-border-color);
+  border-radius: var(--border-radius);
+  font-size: calc(var(--font-size) * 1.5);
+}
+
+/* Style the border around the post summaries */
 .homepage-content-container {
   border-color: var(--card-border-color);
   border-width: 5px;
@@ -89,53 +112,44 @@ nav {
   padding: 0 calc(var(--block-spacing-vertical) / 4);
 }
 
-#summary {
+/* Change the spacing between the summary boxes and inside the summary boxes */
+.summary {
   padding: calc(var(--block-spacing-vertical) / 4) var(--block-spacing-horizontal);
   margin: calc(var(--block-spacing-vertical) / 4) 0;
 }
-
 .summary-info {
   margin: 0 0;
 }
 
+/* This makes the "Next Page" and "Previous Page" anchor tags separated beneath each article */
 #pagination-container {
   display: flex;
   justify-content: space-between;
 }
 
+/* Word count and date should have no spacing */
 #article-info {
   margin: 0 0;
 }
 
+/* Give some space between the title and the navbar, but none between the title and the article info */
 #article-title {
   margin-top: var(--typography-spacing-vertical);
   margin-bottom: 0;
 }
 
-#site-title {
-  font-size: calc(var(--font-size) * 1.5);
-  margin-bottom: calc(var(--typography-spacing-vertical) / 3);
-}
-
-/* Search page styles */
+/* Add some spacing between the search bar and the navbar */
 #search {
   padding-top: 3rem;
 }
 
+/* Hide the "Clear Button" that comes with Pagefind */
 .pagefind-ui__search-clear {
   display: none;
 }
 
+/* Round the corners of the search bar and fix the padding */
 .pagefind-ui__search-input {
   padding-inline-start: 2.75rem;
   border-radius: 5rem;
-}
-
- /* Homepage link styles */
- .homepage-link {
-  margin: calc(var(--block-spacing-vertical) / 4) 0;
-  text-align: center;
-  background-color: var(--card-border-color);
-  border-radius: var(--border-radius);
-  font-size: calc(var(--font-size) * 1.5);
 }
