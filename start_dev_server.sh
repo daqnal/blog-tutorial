@@ -1,4 +1,5 @@
 #!/bin/sh
+rm -rf public/
 hugo
-npx pagefind
-hugo server
+hugo --gc --minify
+npm_config_yes=true npx pagefind --site "public" --serve
