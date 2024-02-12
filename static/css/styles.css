@@ -9,11 +9,11 @@
 
 :root {
   /* Set the Google Font (Kanit in the example) as the primary font by default with backups */
-  --font-family: "Kanit", system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu",
+  --pico-font-family: "Kanit", system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu",
   "Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
   "Segoe UI Symbol", "Noto Color Emoji";
   
-  --border-radius: 0.75rem;
+  --pico-border-radius: 0.75rem;
 }
 
 
@@ -24,38 +24,38 @@
 /* Can be forced with data-theme="light" */
 [data-theme="light"],
 :root:not([data-theme="dark"]) {
-  --primary: #1e88e5;
-  --primary-hover: #1976d2;
-  --primary-focus: rgba(30, 136, 229, 0.125);
-  --primary-inverse: #FFF;
+  --pico-primary: #1e88e5;
+  --pico-primary-hover: #1976d2;
+  --pico-primary-focus: rgba(30, 136, 229, 0.125);
+  --pico-primary-inverse: #FFF;
 }
 
 /* Blue Dark scheme (Auto) */
 /* Automatically enabled if user has Dark mode enabled */
 @media only screen and (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
-    --primary: #1e88e5;
-    --primary-hover: #2196f3;
-    --primary-focus: rgba(30, 136, 229, 0.25);
-    --primary-inverse: #FFF;
+    --pico-primary: #1e88e5;
+    --pico-primary-hover: #2196f3;
+    --pico-primary-focus: rgba(30, 136, 229, 0.25);
+    --pico-primary-inverse: #FFF;
   }
 }
 
 /* Blue Dark scheme (Forced) */
 /* Enabled if forced with data-theme="dark" */
 [data-theme="dark"] {
-  --primary: #1e88e5;
-  --primary-hover: #2196f3;
-  --primary-focus: rgba(30, 136, 229, 0.25);
-  --primary-inverse: #FFF;
+  --pico-primary: #1e88e5;
+  --pico-primary-hover: #2196f3;
+  --pico-primary-focus: rgba(30, 136, 229, 0.25);
+  --pico-primary-inverse: #FFF;
 }
 
 /* Blue (Common styles) */
 :root {
-  --form-element-active-border-color: var(--primary);
-  --form-element-focus-color: var(--primary-focus);
-  --switch-color: var(--primary-inverse);
-  --switch-checked-background-color: var(--primary);
+  --pico-form-element-active-border-color: var(--pico-primary);
+  --pico-form-element-focus-color: var(--pico-primary-focus);
+  --pico-switch-color: var(--pico-primary-inverse);
+  --pico-switch-checked-background-color: var(--pico-primary);
 }
 
 
@@ -80,42 +80,43 @@ body {
 /* Add some horizontal spacing to the navbar and give it a bg color */
 nav {
   padding: 0 20px;
-  background-color: var(--card-border-color);
+  background-color: var(--pico-card-border-color);
 }
 
 /* Make the title of the site in the navbar bigger */
 #nav-title {
-  font-size: calc(var(--font-size) + 0.5em);
+  font-size: calc(var(--pico-font-size));
 }
 
 /* Change the size and bottom margin of the title on the homepage */
 #site-title {
-  font-size: calc(var(--font-size) * 1.5);
-  margin-bottom: calc(var(--typography-spacing-vertical) / 3);
+  font-size: calc(var(--pico-font-size) * 1.5);
+  margin: calc(var(--pico-typography-spacing-vertical) * 1.5) 0;
 }
 
 /* Add margin, border, background, and rounding to the 3 links on the homepage */
  .homepage-link {
-  margin: calc(var(--block-spacing-vertical) / 4) 0;
+  margin: var(--pico-block-spacing-vertical) 0;
+  padding: calc(var(--pico-block-spacing-horizontal) / 2) 0;
   text-align: center;
-  background-color: var(--card-border-color);
-  border-radius: var(--border-radius);
-  font-size: calc(var(--font-size) * 1.5);
+  background-color: var(--pico-card-border-color);
+  border-radius: var(--pico-border-radius);
+  font-size: calc(var(--pico-font-size) * 1.5);
 }
 
 /* Style the border around the post summaries */
 .homepage-content-container {
-  border-color: var(--card-border-color);
-  border-width: 5px;
+  border-color: var(--pico-card-border-color);
+  border-width: 8px;
   border-style: solid;
-  border-radius: calc(var(--border-radius) + 0.25rem);
-  padding: 0 calc(var(--block-spacing-vertical) / 4);
+  border-radius: calc(var(--pico-border-radius) + 0.25rem);
+  padding: 0 var(--pico-block-spacing-vertical);
 }
 
 /* Change the spacing between the summary boxes and inside the summary boxes */
 .summary {
-  padding: calc(var(--block-spacing-vertical) / 4) var(--block-spacing-horizontal);
-  margin: calc(var(--block-spacing-vertical) / 4) 0;
+  padding: var(--pico-block-spacing-vertical) var(--pico-block-spacing-horizontal);
+  margin: var(--pico-block-spacing-vertical) 0;
 }
 .summary-info {
   margin: 0 0;
@@ -134,7 +135,8 @@ nav {
 
 /* Give some space between the title and the navbar, but none between the title and the article info */
 #article-title {
-  margin-top: var(--typography-spacing-vertical);
+  font-size: calc(var(--pico-font-size) + 1rem);
+  margin-top: var(--pico-typography-spacing-vertical);
   margin-bottom: 0;
 }
 
@@ -153,3 +155,5 @@ nav {
   padding-inline-start: 2.75rem;
   border-radius: 5rem;
 }
+
+/* ---------------END DEFAULT STYLES--------------- */
