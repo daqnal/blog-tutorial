@@ -16,49 +16,7 @@
   --pico-border-radius: 0.75rem;
 }
 
-
-/* Blue theme set by Pico */
-/* https://picocss.com/docs/customization.html */
-
-/* Blue Light scheme (Default) */
-/* Can be forced with data-theme="light" */
-[data-theme="light"],
-:root:not([data-theme="dark"]) {
-  --pico-primary: #1e88e5;
-  --pico-primary-hover: #1976d2;
-  --pico-primary-focus: rgba(30, 136, 229, 0.125);
-  --pico-primary-inverse: #FFF;
-}
-
-/* Blue Dark scheme (Auto) */
-/* Automatically enabled if user has Dark mode enabled */
-@media only screen and (prefers-color-scheme: dark) {
-  :root:not([data-theme]) {
-    --pico-primary: #1e88e5;
-    --pico-primary-hover: #2196f3;
-    --pico-primary-focus: rgba(30, 136, 229, 0.25);
-    --pico-primary-inverse: #FFF;
-  }
-}
-
-/* Blue Dark scheme (Forced) */
-/* Enabled if forced with data-theme="dark" */
-[data-theme="dark"] {
-  --pico-primary: #1e88e5;
-  --pico-primary-hover: #2196f3;
-  --pico-primary-focus: rgba(30, 136, 229, 0.25);
-  --pico-primary-inverse: #FFF;
-}
-
-/* Blue (Common styles) */
-:root {
-  --pico-form-element-active-border-color: var(--pico-primary);
-  --pico-form-element-focus-color: var(--pico-primary-focus);
-  --pico-switch-color: var(--pico-primary-inverse);
-  --pico-switch-checked-background-color: var(--pico-primary);
-}
-
-
+/* For a custom color scheme, visit https://picocss.com/docs/version-picker */
 
 /* Minimal customizations to look ok */
 
