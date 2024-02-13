@@ -5,7 +5,7 @@
 
 /* Customize Pico's styles by overriding CSS variables */
 /* Find the full list here: */
-/* https://github.com/picocss/pico/blob/master/css/themes/default.css */
+/* https://picocss.com/docs/css-variables */
 
 :root {
   /* Set the Google Font (Kanit in the example) as the primary font by default with backups */
@@ -39,6 +39,11 @@ body {
 nav {
   padding: 0 20px;
   background-color: var(--pico-card-border-color);
+}
+
+nav li [role=button] {
+  border-radius: 25px;
+  padding: 0.25em 0.6em;
 }
 
 /* Make the title of the site in the navbar bigger */
@@ -111,7 +116,16 @@ nav {
 /* Round the corners of the search bar and fix the padding */
 .pagefind-ui__search-input {
   padding-inline-start: 2.75rem;
-  border-radius: 5rem;
+  border-radius: 5rem !important;
+}
+
+.pagefind-ui__form {
+  flex-direction: column;
+  box-shadow: none !important;
+}
+
+.pagefind-ui__drawer {
+  margin-top: var(--pico-block-spacing-vertical);
 }
 
 /* ---------------END DEFAULT STYLES--------------- */

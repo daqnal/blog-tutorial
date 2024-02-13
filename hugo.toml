@@ -4,6 +4,7 @@ title = 'My New Hugo Site'
 enableRobotsTXT = true
 enableEmoji = true
 summaryLength = 20
+# ignoreFiles = [ "" ]
 
 [params]
     description = "check the blog yo"
