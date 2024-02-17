@@ -93,7 +93,7 @@ nav li [role=button] {
 
 /* Word count and date should have no spacing */
 #article-info {
-  margin: 0 0;
+  margin-bottom: 1rem;
 }
 
 /* Give some space between the title and the navbar, but none between the title and the article info */
