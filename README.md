@@ -9,4 +9,4 @@ YouTube tutorial to come, but here are basic instructions for getting started:
 5. Customize from there. Customize the styles in `/static/styles.css`.
 6. Add content using `hugo new content/posts/my-new-post.md` or `hugo new content/posts/my-new-post/index.md` to organize by folder.
 7. Host using [Cloudflare Pages](pages.cloudflare.com), [Vercel](vercel.com), or something similar
-Make sure the build command is `hugo && npm_config_yes=true npx pagefind`.
+Make sure the build command is `hugo --gc --minify && npm_config_yes=true npx pagefind`.
